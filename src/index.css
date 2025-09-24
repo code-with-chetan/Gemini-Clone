@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+@layer components{
+    img{
+        @apply w-[20px];
+    }
+}
