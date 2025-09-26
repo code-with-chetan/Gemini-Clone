@@ -58,7 +58,8 @@ const Main=()=>{
 
                         </div>
 
-                        : <p dangerouslySetInnerHTML={{ __html: resultData }}></p>
+                        : <p className="text-[17px] font-light leading-[1.8]"
+                        dangerouslySetInnerHTML={{ __html: resultData }}></p>
                     }
                    
                 </div>
