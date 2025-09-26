@@ -1,7 +1,73 @@
-@import "tailwindcss";
+.hide-scrollbar {
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+}
 
-@layer components{
-    img{
-        @apply w-[20px];
+.hide-scrollbar::-webkit-scrollbar {   
+    display: none;
+    width: 0; 
+    height: 0; 
+}
+
+
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+@layer base {
+  html, body {
+    font-family: "Outfit", sans-serif;
+
+  }
+}
+
+@theme {
+  @keyframes pulse-bg {
+    0% {
+      background-position: -800px 0;
     }
+    100% {
+      background-position: 800px 0;
+    }
+  }
+  --animate-pulse-bg-custom: pulse-bg 1s infinite linear;
+}
+
+.gradient-text-clip {
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+@layer components {
+  img {
+    @apply w-[20px];
+  }
+  
+  .recent-entry {
+    @apply flex items-start gap-2.5 p-2.5 pr-10 rounded-[50px] text-[#282828] 
+           cursor-pointer hover:bg-[#e2e6eb] transition-colors duration-200;
+  }
+
+  .bottom-items {
+    @apply pr-2.5 cursor-pointer;
+  }
+
+  .card{
+    @apply h-[200px] p-[15px] bg-[#f0f4f9] rounded-xl relative cursor-pointer hover:bg-[#dfe4ea];
+  }
+
+  .div-icon{
+    @apply w-[35px] p-[5px] absolute bg-white rounded-[20px] bottom-[10px] right-[10px];
+  }
+
+  .para-div{
+    @apply text-[#585858] text-[17px];
+  }
+
+   .hr-skeleton-pulse {
+    @apply rounded-lg border-none bg-[#f6f7f8] h-5 bg-no-repeat 
+           bg-[image:linear-gradient(to_right,#9ed7ff,#ffffff,#9ed7ff)] 
+           bg-[size:800px_50px] animate-pulse-bg-custom;
+  }
+
+
 }
