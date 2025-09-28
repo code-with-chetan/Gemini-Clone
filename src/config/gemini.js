@@ -1,6 +1,7 @@
 
 //node --version # should be >=18
 //npm install @google/generative-ai
+const apiKey = import.meta.env.VITE_API_KEY;
 
 import {
     GoogleGenerativeAI,
@@ -10,7 +11,7 @@ import {
 
 
 const MODEL_NAME = "gemini-2.5-flash-lite";
-const API_KEY="AIzaSyB6i71MqHw1JrUdph8PK8LVh_CK4fj2O64";
+const API_KEY=apiKey;
 
 async function runChat(prompt){
     const genAI=new GoogleGenerativeAI(API_KEY);
