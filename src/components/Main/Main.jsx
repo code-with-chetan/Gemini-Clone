@@ -8,7 +8,7 @@ const Main = () => {
 
   return (
     <div className="flex-1 min-h-screen pb-[15vh] relative">
-      <div className="flex items-center justify-between text-[22px] p-5 text-[#585858] max-[600px]:sticky max-[600px]:pb-[3px]">
+      <div className="flex items-center justify-between text-[22px] p-5 text-[#585858] max-[600px]:sticky max-[600px]:pb-[3px] max-[600px]:shadow-md">
         <p>Gemini</p>
         <img className="w-[40px] rounded-[50%]" src={assets.user_icon} alt="user icon" />
       </div>
@@ -78,14 +78,15 @@ const Main = () => {
           </div>
         )}
 
-        <div className="absolute bottom-0 w-full max-w-[900px] px-0 py-5 max-[1080px]:px-7 max-[1080px]:translate-y-5 max-[600px]:px-3 max-[600px]:py-3">
-          <div className="flex items-center justify-between gap-5 bg-[#f0f4f9] px-4 py-3 rounded-[50px] max-[600px]:bg-gray-100 max-[600px]:rounded-xl max-[600px]:shadow-md max-[600px]:p-3">
+        <div className="absolute bottom-0 w-full max-w-[900px] px-0 py-5 max-[1080px]:px-7 max-[1080px]:translate-y-5 max-[600px]:fixed max-[600px]:bottom-0 max-[600px]:px-3 max-[600px]:py-3 max-[600px]:bg-white max-[600px]:rounded-t-xl max-[600px]:shadow-md max-[600px]:pb-5">
+          <div className="flex items-center justify-between gap-5 bg-[#f0f4f9] px-4 py-3 rounded-[50px]
+           max-[600px]:bg-gray-200 max-[600px]:rounded-xl max-[600px]:shadow-2xl max-[600px]:p-3">
             <input
               onChange={(e) => setInput(e.target.value)}
               value={input}
               className="flex-1 border-none outline-none text-[18px] p-[4px] max-[600px]:text-[16px] max-[600px]:p-2 max-[600px]:rounded-md"
               type="text"
-              placeholder="Enter a prompt Here..."
+              placeholder="Ask anything..."
             />
             <div className="flex items-center gap-[15px] max-[600px]:gap-[5px]">
               <img
@@ -108,7 +109,7 @@ const Main = () => {
               )}
             </div>
           </div>
-          <p className="text-[13px] mx-[15px] my-auto text-center font-light max-[600px]:text-[12px] max-[600px]:leading-snug">
+          <p className="text-[13px] mx-[15px] my-auto text-center font-light max-[600px]:text-[12px] max-[600px]:leading-snug max-[600px]:pb-20 max-[600px]:pt-2.5">
             Generated, not gospel. A quick review keeps the facts real.
           </p>
         </div>
